@@ -88,21 +88,18 @@ a:visited {
     }
 }
 
-.page-wrapper {
-    justify-content: space-around;
-}
-
 
 .page-wrapper {
     display: flex; flex-direction: row; flex-wrap: wrap; column-gap: 3rem; row-gap: 2rem;
+    padding-top: 3rem;
     text-shadow: 1px 1px 0 #fff;
     width: 100vw;
+    justify-content: space-around;
 }
 
 .page-img-wrapper {
     width: 100vw;
     display: flex; justify-content: center;
-    margin-top: 2rem;
 }
 .page-img-wrapper>img {
     width: 80%;
