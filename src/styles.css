@@ -119,7 +119,7 @@ h1 {
     margin: 0 0 0.5rem;
 }
 
-.page-wrapper>div>p {
+.page-wrapper>div>p, ul {
     line-height: 160%;
     margin: 0 .7rem 1rem;
     font-size: 1.3rem;
@@ -163,13 +163,15 @@ h1 {
 }
 
 
-.gallery-wrapper>a>img {
+.gallery-wrapper>a>img, .gallery-wrapper>img {
     max-width: fit-content;
     min-width: 100px;
     border-radius: 1rem;
-    filter: grayscale(40%) ;
 }
 
+.gallery-wrapper>a>img {
+    filter: grayscale(40%) ;
+}
 
 
 /* MENUBAR ICON */
