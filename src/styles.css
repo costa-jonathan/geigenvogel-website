@@ -252,7 +252,7 @@ header {
 }
 
 header>img {
-    margin: 4rem 0 0 0;
+    margin: 4rem 0.5rem 0 0.5rem;
     max-width: fit-content;
     max-height: fit-content;
 }
