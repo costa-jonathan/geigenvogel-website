@@ -243,7 +243,6 @@ a:visited {
 header {
     width: 100vw;
     height: 80vh;
-    display: flex; justify-content: center;
     position: fixed;
 
 
@@ -251,10 +250,22 @@ header {
     background-repeat: repeat-y;
 }
 
+@media all and (min-width: 410px) {
+    header {
+        display: flex; justify-content: center;
+    }
+    header>img {
+        width: auto;
+    }
+}
+
+
 header>img {
-    margin: 4rem 0.5rem 0 0.5rem;
+    margin: 2.5rem 5vw 0 5vw;
     max-width: fit-content;
     max-height: fit-content;
+    width: 90vw;
+    height: auto;
 }
 
 
@@ -316,7 +327,8 @@ h1 {
 
 .gallery-wrapper>a>img, .gallery-wrapper>img {
     max-width: fit-content;
-    min-width: 100px;
+    max-height: fit-content;
+    width: 90vw;
     border-radius: 1rem;
 }
 
