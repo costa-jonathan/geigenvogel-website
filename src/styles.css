@@ -205,10 +205,13 @@ a:visited {
     background-repeat: repeat-y;
 
     /*background: whitesmoke;*/
+}
 
+.page-top-transition {
+    height: 7rem;
     -webkit-mask: -webkit-gradient(
             linear,
-            left 13%,
+            left 100%,
             left 0%,
             from(rgba(0, 0, 0, 1)),
             to(rgba(0, 0, 0, 0))
@@ -230,8 +233,8 @@ a:visited {
     box-shadow: 0 -8px 8px rgba(0, 0, 0, 0.1);
     margin-top: 50vh;
 
-    -webkit-backdrop-filter: blur(4px) brightness(1);
-    backdrop-filter: blur(4px) ;
+    -webkit-backdrop-filter: blur(8px) brightness(1);
+    backdrop-filter: blur(8px) brightness(1);
     background: rgba(255, 255, 255, 0.24);
 
     display: flex; flex-direction: row; flex-wrap: wrap; column-gap: 3rem; row-gap: 2rem; justify-content: space-around;
@@ -243,6 +246,7 @@ a:visited {
 header {
     width: 100vw;
     height: 80vh;
+    padding-bottom: 20vh;
     position: fixed;
 
 
@@ -255,7 +259,8 @@ header {
         display: flex; justify-content: center;
     }
     header>img {
-        width: auto;
+        width: auto !important;
+        height: 40vh !important;
     }
 }
 
@@ -277,28 +282,34 @@ header>img {
 h1 {
     font-size: 1.8rem;
     font-weight: bold;
-    margin: 0 0 0.5rem;
+    margin: 2rem 0 2rem;
+    text-align: center;
 }
 
 .page-wrapper>div>p, ul {
     line-height: 160%;
     margin: 0 .7rem 1rem;
     font-size: 1.3rem;
+    text-align: justify;
 }
 
 .gallery-wrapper {
     display: flex; flex-direction: column; gap: 1rem; align-items: center;
-
 }
 
-.gallery-wrapper>a {
+.multi-column {
+    flex-direction: row !important; flex-wrap: wrap; width: 90vw; justify-content: center;
+    gap: 4rem;
+}
+
+.gallery-wrapper>a, .gallery-wrapper>div {
     width: 80%;
     height: auto;
     display: flex; align-items: center; justify-content: center;
 
 }
 
-.gallery-wrapper>a>span {
+.gallery-wrapper>a>span, .gallery-wrapper>div>span{
     text-align: center;
     position: absolute;
     font-size: 2.6rem;
@@ -314,26 +325,56 @@ h1 {
     text-shadow: none;
 }
 
+.gallery-wrapper>div>span{
+    -webkit-backdrop-filter: blur(15px) brightness(.5);
+    backdrop-filter: blur(15px) brightness(.5);
+}
+
+.small-font-box {
+    font-size: 1.8rem !important;
+}
+
+.small-font-box>a {
+    color: #edcd96;
+}
+
+.small-font-box>a:hover {
+    color: whitesmoke;
+}
+
+/* todo potentially need to downscale fonts for very small devices */
+/* ONLY ON MOBILE */
 @media all and (max-width: 320px) {
     .gallery-wrapper {
         width: 100vw;
     }
 
-    .gallery-wrapper>a>span {
+    .small-font-box {
+        font-size: 8vw !important;
+    }
+
+
+    .gallery-wrapper>a>span, .gallery-wrapper>div>span {
         font-size: 12vw;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    ul {
+        margin-left: -1rem;
     }
 }
 
 
-.gallery-wrapper>a>img, .gallery-wrapper>img {
+.gallery-wrapper>a>img, .gallery-wrapper>img, .gallery-wrapper>div>img {
     max-width: fit-content;
     max-height: fit-content;
     width: 90vw;
     border-radius: 1rem;
 }
 
-.gallery-wrapper>a>img {
+.gallery-wrapper>a>img, .gallery-wrapper>div>img {
     filter: grayscale(40%) ;
 }
-
-
