@@ -258,14 +258,14 @@ header {
     header {
         display: flex; justify-content: center;
     }
-    header>img {
+    header>a>img, header>img {
         width: auto !important;
         height: 40vh !important;
     }
 }
 
 
-header>img {
+header>a>img, header>img {
     margin: 2.5rem 5vw 0 5vw;
     max-width: fit-content;
     max-height: fit-content;
