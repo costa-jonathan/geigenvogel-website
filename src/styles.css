@@ -342,6 +342,11 @@ h1 {
     color: whitesmoke;
 }
 
+
+#kontakt>a {
+    font-size: 1.8rem;
+}
+
 /* todo potentially need to downscale fonts for very small devices */
 /* ONLY ON MOBILE */
 @media all and (max-width: 320px) {
