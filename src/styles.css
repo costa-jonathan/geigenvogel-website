@@ -350,10 +350,16 @@ h1 {
     filter: grayscale(40%) ;
 }
 
-
 #back-to-home {
-    position: absolute;
-    top: 63vh; left: 1.8rem;
+    position: absolute;top: 63vh; left: 1.8rem;
+}
+
+#back-to-home-bottom {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+#back-to-home, #back-to-home-bottom {
     color: rgba(109, 152, 186);
     text-decoration: none;
 }
