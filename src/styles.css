@@ -175,14 +175,14 @@ footer>div {
 /* LINKS */
 a {
     text-decoration: underline; text-decoration-thickness: 0.2rem; text-underline-offset: 0.1rem; text-decoration-skip-ink: none;
-    color: rgba(109, 152, 186, 0.85);
+    color: rgba(109, 152, 186);
 }
 a:hover {
     text-decoration: underline;
     color: black;
 }
 a:visited {
-    color: rgba(43, 60, 73, 0.85);
+    color: rgb(82, 107, 134);
 }
 
 
@@ -267,10 +267,6 @@ h1 {
     width: 90vw;
 }
 
-.multi-column {
-    flex-direction: row !important; flex-wrap: wrap; width: 90vw; justify-content: center;
-    gap: 4rem;
-}
 
 .gallery-wrapper>a, .gallery-wrapper>div {
     width: fit-content;
@@ -352,4 +348,19 @@ h1 {
 
 .gallery-wrapper>a>img, .gallery-wrapper>div>img {
     filter: grayscale(40%) ;
+}
+
+
+#back-to-home {
+    position: absolute;
+    top: 63vh; left: 1.8rem;
+    color: rgba(109, 152, 186);
+    text-decoration: none;
+}
+
+#back-to-home::before {
+    content: '←';
+    font-size: 4rem;
+    position: absolute;
+    top: -1.5rem; left: -1.3rem;
 }
